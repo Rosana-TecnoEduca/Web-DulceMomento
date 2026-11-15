@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dulce Momento | Hecho en casa, con amor, en Luján</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧁</text></svg>">
+
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <div class="container announcement-content">
+      <span class="announcement-badge"><i class="fa-solid fa-heart"></i> Repostería artesanal</span>
+      <span>Envíos coordinados y retiro en casa · Luján, Buenos Aires</span>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <!-- Logo con icono de torta en círculo rosa y torta marrón -->
+      <a href="#inicio" class="brand-logo" aria-label="Ir al inicio">
+        <div class="logo-icon-circle">
+          <i class="fa-solid fa-cake-candles logo-cake-icon"></i>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-title">Dulce Momento</span>
+          <span class="logo-subtitle">HECHO EN CASA · LUJÁN</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+          <li><a href="#productos" class="nav-link">Productos</a></li>
+          <li><a href="#como-pedir" class="nav-link">Cómo pedir</a></li>
+          <li><a href="#por-que-elegirnos" class="nav-link">Por qué elegirnos</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#productos" class="btn btn-primary btn-header">
+          Hacé tu pedido
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="inicio">
+    <div class="container hero-grid">
+      <div class="hero-text-col">
+        
+        <!-- Icono de estrella rosa arriba de Dulce Momento -->
+        <div class="hero-pill-tag">
+          <i class="fa-solid fa-star star-pink-icon"></i>
+          <span>Emprendimiento artesanal, hecho en casa</span>
+        </div>
+
+        <!-- Dulce en marrón (#462b1b) y Momento en rosa (#dc90b3) -->
+        <h1 class="hero-title">
+          <span class="hero-title-dulce">Dulce</span>
+          <span class="hero-title-momento">Momento</span>
+        </h1>
+
+        <p class="hero-lead">Hecho en casa, con amor, en Luján.</p>
+        <p class="hero-description">
+          Pequeños dulces con sabor a hogar. Todo fresco, por encargo y preparado por <strong>Valeria</strong>, con recetas de la casa.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#productos" class="btn btn-primary btn-lg">
+            Ver productos <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <button class="btn btn-outline btn-lg" onclick="openWhatsAppChat('¡Hola Valeria! Me gustaría hacerte una consulta sobre tus dulces.')">
+            <i class="fa-brands fa-whatsapp icon-brown"></i> Hacer pedido por WhatsApp
+          </button>
+        </div>
+
+        <div class="hero-badges">
+          <span class="badge-item"><i class="fa-solid fa-circle-check badge-icon"></i> <strong>Casero y fresco</strong></span>
+          <span class="badge-item"><i class="fa-solid fa-circle-check badge-icon"></i> <strong>Precio económico</strong></span>
+          <span class="badge-item"><i class="fa-solid fa-circle-check badge-icon"></i> <strong>Hecho por encargo</strong></span>
+        </div>
+      </div>
+
+      <div class="hero-image-col">
+        <div class="hero-card-wrapper">
+          <!-- Recuadro con bordes redondos marrón con Recién horneado y corazón -->
+          <div class="floating-tag tag-top">
+            <i class="fa-solid fa-heart tag-heart-pink"></i>
+            <span>Recién horneado</span>
+            <span class="sparkle">✨</span>
+          </div>
+
+          <div class="hero-image-frame">
+            <img src="images/hero-cocina.png" 
+                 alt="Valeria en la cocina preparando repostería casera con vista a la basílica" 
+                 class="hero-img">
+          </div>
+
+          <!-- Badge inferior con borde marrón -->
+          <div class="floating-tag tag-bottom">
+            <div class="tag-icon-circle">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div>
+              <strong>De mi cocina a tu mesa</strong>
+              <small>Luján, Buenos Aires</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Sobre Mí -->
+  <section class="about-section" id="sobre-mi">
+    <div class="container about-grid">
+      <!-- Tarjeta izquierda marrón (#462b1b) -->
+      <div class="about-card-dark">
+        <div class="pill-badge pill-pink-outline">
+          <span class="wave">👋</span> Hola, soy Valeria
+        </div>
+        <h2 class="dark-card-title">Cada dulce tiene una historia casera.</h2>
+        <p class="dark-card-text">
+          Soy emprendedora de Luján y en <strong>Dulce Momento</strong> hago todo yo misma, en casa. 
+          Me gusta lo simple y lo rico: lo que sale del horno, con tiempo y con cariño.
+        </p>
+
+        <div class="dark-card-footer">
+          <div class="footer-icon-circle">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            <strong>Desde Luján, Buenos Aires.</strong>
+            <span>Retiro en casa, coordinado con cada pedido.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta derecha clara con borde marrón destacado -->
+      <div class="about-card-light">
+        <span class="section-label">SOBRE MÍ</span>
+        <h3 class="light-card-title">Fresco por encargo, con recetas de la casa.</h3>
+        <p class="light-card-text">
+          Nada queda guardado de más: preparo cada pedido cuando me lo pedís, para que llegue fresco y con ese sabor a recién hecho. Son recetas de la casa, de esas que se comparten en familia.
+        </p>
+
+        <div class="ingredients-box">
+          <span class="ingredients-label"><i class="fa-solid fa-spoon icon-brown"></i> Con ingredientes de siempre:</span>
+          <div class="tags-cloud">
+            <span class="ingredient-pill">Harina</span>
+            <span class="ingredient-pill">Azúcar</span>
+            <span class="ingredient-pill">Margarina</span>
+            <span class="ingredient-pill">Huevos</span>
+            <span class="ingredient-pill">Dulce de batata</span>
+            <span class="ingredient-pill">Dulce de membrillo</span>
+          </div>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-card">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">casero</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">Fresco</span>
+            <span class="stat-label">por encargo</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">Luján</span>
+            <span class="stat-label">mi lugar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Nuestros Productos -->
+  <section class="products-section" id="productos">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="pill-badge pill-pink">
+          <i class="fa-solid fa-star"></i> Hecho en casa
+        </div>
+        <span class="section-label">NUESTROS PRODUCTOS</span>
+        <h2 class="section-title">Dulces para cada momento</h2>
+        <p class="section-description">
+          Elegí tu favorito y pedilo. Todo se prepara fresco, por encargo.
+        </p>
+      </div>
+
+      <div class="products-grid">
+        <!-- Producto 1: Pastafrola -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <span class="product-badge"><i class="fa-solid fa-heart"></i> Hecho en casa</span>
+            <img src="images/pasta-flora.jpg" 
+                 alt="Pastaflora casera con dulce tradicional" 
+                 class="product-img">
+          </div>
+          
+          <div class="product-body">
+            <h3 class="product-title">Pastaflora</h3>
+            <p class="product-desc">Masa casera con dulce, la de siempre.</p>
+
+            <div class="product-options">
+              <!-- Opción 1 -->
+              <div class="option-row">
+                <div class="option-info">
+                  <span class="option-tag">EL ANTOJO PERFECTO</span>
+                  <h4 class="option-name">Mini Pastaflora · 1 unidad</h4>
+                  <p class="option-detail">Ideal para un antojo, masa casera con dulce.</p>
+                </div>
+                <div class="option-action">
+                  <span class="option-price">$3.500</span>
+                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Mini Pastaflora (1 unidad)', '$3.500')">
+                    <i class="fa-solid fa-bag-shopping"></i> Pedir este
+                  </button>
+                </div>
+              </div>
+
+              <!-- Opción 2 -->
+              <div class="option-row">
+                <div class="option-info">
+                  <span class="option-tag">PARA COMPARTIR</span>
+                  <h4 class="option-name">Pastaflora Grande · 1 unidad</h4>
+                  <p class="option-detail">La de siempre, más grande, para compartir en familia.</p>
+                </div>
+                <div class="option-action">
+                  <span class="option-price">$4.500</span>
+                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Pastaflora Grande (1 unidad)', '$4.500')">
+                    <i class="fa-solid fa-bag-shopping"></i> Pedir este
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 2: Pepas de Batata y Membrillo -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <span class="product-badge"><i class="fa-solid fa-heart"></i> Hecho en casa</span>
+            <img src="images/pepas.jpg" 
+                 alt="Pepas de Batata y Membrillo caseras con dulce artesanal" 
+                 class="product-img">
+          </div>
+          
+          <div class="product-body">
+            <h3 class="product-title">Pepas de Batata y Membrillo</h3>
+            <p class="product-desc">Tiernas, caseras y con el corazón de dulce.</p>
+
+            <div class="product-options">
+              <!-- Opción 1 -->
+              <div class="option-row">
+                <div class="option-info">
+                  <span class="option-tag">CLÁSICAS DE LA CASA</span>
+                  <h4 class="option-name">Pepas de Batata y Membrillo · 3 unidades</h4>
+                  <p class="option-detail">Tiernas, caseras y con el corazón de dulce.</p>
+                </div>
+                <div class="option-action">
+                  <span class="option-price">$2.500</span>
+                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Pepas de Batata y Membrillo (3 unidades)', '$2.500')">
+                    <i class="fa-solid fa-bag-shopping"></i> Pedir este
+                  </button>
+                </div>
+              </div>
+
+              <!-- Opción 2 -->
+              <div class="option-row">
+                <div class="option-info">
+                  <span class="option-tag">MÁS PARA COMPARTIR</span>
+                  <h4 class="option-name">Pepas de Batata y Membrillo · 6 unidades</h4>
+                  <p class="option-detail">La misma receta, en cantidad para compartir.</p>
+                </div>
+                <div class="option-action">
+                  <span class="option-price">$3.500</span>
+                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Pepas de Batata y Membrillo (6 unidades)', '$3.500')">
+                    <i class="fa-solid fa-bag-shopping"></i> Pedir este
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Suggestion Callout Banner -->
+      <div class="quick-order-callout">
+        <div class="callout-left">
+          <span class="callout-tag">¿POR CUÁL EMPEZAMOS?</span>
+          <h3 class="callout-product">Mini Pastaflora · 1 unidad</h3>
+          <p class="callout-desc"><strong>$3.500</strong> · Ideal para un antojo, masa casera con dulce.</p>
+        </div>
+        <div class="callout-buttons">
+          <button class="btn btn-pink-solid" onclick="openWhatsAppChat('¡Hola Valeria! Quiero pedir 1 Mini Pastaflora ($3.500).')">
+            <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+          </button>
+          <a href="https://instagram.com/dulce.momento2627" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">
+            <i class="fa-brands fa-instagram"></i> Pedir por Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Cómo Pedir -->
+  <section class="how-it-works-section" id="como-pedir">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-label">CÓMO PEDIR</span>
+        <h2 class="section-title">Tan fácil como un antojo</h2>
+      </div>
+
+      <div class="steps-grid">
+        <!-- Paso 1 -->
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-number">1</span>
+            <div class="step-icon"><i class="fa-solid fa-cake-candles"></i></div>
+          </div>
+          <h3 class="step-title">Elegís</h3>
+          <p class="step-text">Elegí tu pastaflora o tus pepas favoritas.</p>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-number">2</span>
+            <div class="step-icon"><i class="fa-regular fa-comments"></i></div>
+          </div>
+          <h3 class="step-title">Me escribís</h3>
+          <p class="step-text">Escribime por WhatsApp o Instagram <strong>@dulce.momento2627</strong>.</p>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-number">3</span>
+            <div class="step-icon"><i class="fa-solid fa-fire-burner"></i></div>
+          </div>
+          <h3 class="step-title">Lo preparo fresco</h3>
+          <p class="step-text">Lo preparo por encargo, recién hecho para vos.</p>
+        </div>
+
+        <!-- Paso 4 -->
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-number">4</span>
+            <div class="step-icon"><i class="fa-solid fa-house-chimney"></i></div>
+          </div>
+          <h3 class="step-title">Lo retirás</h3>
+          <p class="step-text">Lo retirás en casa, acá en Luján.</p>
+        </div>
+      </div>
+
+      <!-- Barra de Instagram y llamado a la acción -->
+      <div class="social-cta-bar">
+        <div class="social-bar-left">
+          <div class="social-icon-circle">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <span>Instagram: <strong>@dulce.momento2627</strong> · Luján, Buenos Aires</span>
+        </div>
+        <a href="#productos" class="btn btn-primary btn-sm">
+          Elegir mi dulce <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Por qué elegir Dulce Momento -->
+  <section class="why-us-section" id="por-que-elegirnos">
+    <div class="container why-us-grid">
+      <div class="why-us-left">
+        <span class="section-label">POR QUÉ ELEGIR</span>
+        <h2 class="why-us-title">Dulce Momento</h2>
+        <p class="why-us-text">
+          Porque lo casero se nota. En el sabor, en el cuidado y en cada detalle del pedido.
+        </p>
+        <a href="#productos" class="btn btn-primary">
+          Ver productos <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="why-us-cards-grid">
+        <!-- Beneficio 1 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3 class="benefit-title">Casero y fresco</h3>
+          <p class="benefit-desc">Hecho en casa, con recetas de la casa y mucho cariño.</p>
+        </div>
+
+        <!-- Beneficio 2 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-tags"></i>
+          </div>
+          <h3 class="benefit-title">Precio económico</h3>
+          <p class="benefit-desc">Dulces ricos y accesibles, para disfrutar sin vueltas.</p>
+        </div>
+
+        <!-- Beneficio 3 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <h3 class="benefit-title">Hecho por encargo</h3>
+          <p class="benefit-desc">Se prepara cuando lo pedís, para que llegue fresco.</p>
+        </div>
+
+        <!-- Beneficio 4 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3 class="benefit-title">En Luján</h3>
+          <p class="benefit-desc">Emprendimiento local, cerquita tuyo, con retiro en casa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- Col 1 -->
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <div class="logo-icon-circle-footer">
+            <i class="fa-solid fa-cake-candles logo-cake-icon"></i>
+          </div>
+          <div>
+            <span class="footer-brand-title">Dulce Momento</span>
+            <span class="footer-brand-sub">LUJÁN · HECHO EN CASA</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Hecho en casa, con amor, en Luján.<br>
+          Pequeños dulces, grandes momentos.
+        </p>
+      </div>
+
+      <!-- Col 2 -->
+      <div class="footer-col contact-col">
+        <h4 class="footer-heading">Encontranos</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <a href="https://instagram.com/dulce.momento2627" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-instagram icon-pink"></i> @dulce.momento2627
+            </a>
+          </li>
+          <li>
+            <i class="fa-solid fa-location-dot icon-pink"></i> Luján, Buenos Aires
+          </li>
+          <li>
+            <i class="fa-solid fa-store icon-pink"></i> Retiro en casa · por encargo
+          </li>
+        </ul>
+      </div>
+
+      <!-- Col 3 -->
+      <div class="footer-col cta-col">
+        <div class="footer-cta-card">
+          <h4 class="cta-card-title">¿Hoy se antoja algo dulce?</h4>
+          <p class="cta-card-sub">Elegí tu favorito y coordinamos tu pedido.</p>
+          <a href="#productos" class="btn btn-pink-solid btn-block">
+            Hacé tu pedido <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barra Promocional Delicada: Diseñado y programado por Rosana -->
+    <div class="container dev-promo-wrapper">
+      <div class="dev-promo-card">
+        <div class="dev-promo-left">
+          <div class="dev-icon-circle">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <div>
+            <p class="dev-title">Diseñado y programado por <strong>Rosana</strong></p>
+            <p class="dev-desc">¿Querés una página web moderna y atractiva como esta para tu emprendimiento?</p>
+          </div>
+        </div>
+        <button class="btn btn-dev-contact" onclick="openDevModal()">
+          <i class="fa-solid fa-paper-plane"></i> Contactar a Rosana
+        </button>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© Dulce Momento · Valeria Roda · Todos los derechos reservados · Diseño y desarrollo web por Rosana</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Launcher Button -->
+  <div class="floating-whatsapp-container">
+    <button class="whatsapp-float-btn" id="whatsappToggle" aria-label="Abrir chat de WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="float-tooltip">¡Escribime para pedir!</span>
+    </button>
+  </div>
+
+  <!-- Interactive WhatsApp Chat Simulation Popup -->
+  <div class="whatsapp-chat-widget" id="whatsappChatWidget">
+    <div class="whatsapp-widget-header">
+      <div class="agent-info">
+        <div class="agent-avatar">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop" alt="Valeria">
+          <span class="status-indicator"></span>
+        </div>
+        <div class="agent-details">
+          <strong>Valeria Roda</strong>
+          <span>En línea · Dulce Momento</span>
+        </div>
+      </div>
+      <button class="widget-close-btn" id="closeWidgetBtn" aria-label="Cerrar chat">&times;</button>
+    </div>
+
+    <div class="whatsapp-widget-body">
+      <div class="chat-timestamp">Hoy</div>
+      <div class="chat-bubble incoming">
+        <p>¡Hola! 👋 Soy Valeria de <strong>Dulce Momento</strong>.</p>
+        <p>¿Qué dulce casero tenés ganas de disfrutar hoy? Hago todo por encargo para que te llegue súper fresco.</p>
+      </div>
+
+      <div class="quick-options-chips">
+        <button class="chip" onclick="selectQuickChat('Quiero pedir una Mini Pastaflora')">Mini Pastaflora</button>
+        <button class="chip" onclick="selectQuickChat('Quiero pedir una Pastaflora Grande')">Pastaflora Grande</button>
+        <button class="chip" onclick="selectQuickChat('Quiero pedir Pepas x 3 unidades')">Pepas x 3</button>
+        <button class="chip" onclick="selectQuickChat('Quiero pedir Pepas x 6 unidades')">Pepas x 6</button>
+      </div>
+    </div>
+
+    <form class="whatsapp-widget-footer" id="whatsappForm" onsubmit="handleSendWhatsApp(event)">
+      <input type="text" id="whatsappInput" placeholder="Escribe tu respuesta..." required>
+      <button type="submit" class="btn-send-chat" aria-label="Enviar mensaje">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </form>
+  </div>
+
+  <!-- Order Modal with customization -->
+  <div class="order-modal-backdrop" id="orderModal">
+    <div class="order-modal-card">
+      <!-- Botón de cierre visible y destacado -->
+      <button class="modal-close-btn" onclick="closeOrderModal()" aria-label="Cerrar ventana">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-header">
+        <span class="modal-badge"><i class="fa-solid fa-heart"></i> Pedido Artesanal</span>
+        <h3 class="modal-title" id="modalProductTitle">Hacer mi pedido</h3>
+        <p class="modal-subtitle">Completá los datos y coordiná directo con Valeria.</p>
+      </div>
+
+      <!-- Cuadro explicativo: ¿A dónde va la información? -->
+      <div class="modal-destination-notice">
+        <div class="notice-icon">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <div class="notice-text">
+          <strong>¿A dónde se envía la información?</strong>
+          <p>Al confirmar, se abrirá tu WhatsApp con el mensaje ya redactado para enviárselo directamente a <strong>Valeria</strong> y coordinar disponibilidad y retiro en Luján.</p>
+        </div>
+      </div>
+
+      <form id="orderForm" onsubmit="handleOrderSubmit(event)">
+        <div class="form-group">
+          <label for="orderProductSelect">Producto elegido:</label>
+          <select id="orderProductSelect" class="form-control" onchange="updateSelectedProductPrice()">
+            <option value="Mini Pastaflora (1 unidad)" data-price="3500">Mini Pastaflora · 1 unidad ($3.500)</option>
+            <option value="Pastaflora Grande (1 unidad)" data-price="4500">Pastaflora Grande · 1 unidad ($4.500)</option>
+            <option value="Pepas de Batata y Membrillo (3 unidades)" data-price="2500">Pepas de Batata y Membrillo · 3 unidades ($2.500)</option>
+            <option value="Pepas de Batata y Membrillo (6 unidades)" data-price="3500">Pepas de Batata y Membrillo · 6 unidades ($3.500)</option>
+            <option value="Consulta General / Pedido Personalizado" data-price="0">Consulta General / Pedido Personalizado</option>
+          </select>
+        </div>
+
+        <div class="form-row-two">
+          <div class="form-group">
+            <label for="orderFlavor">Relleno / variedad:</label>
+            <select id="orderFlavor" class="form-control">
+              <option value="Membrillo clásico">Dulce de Membrillo clásico</option>
+              <option value="Batata">Dulce de Batata</option>
+              <option value="Mixta (Membrillo y Batata)">Mixta (Membrillo y Batata)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="orderQuantity">Cantidad:</label>
+            <input type="number" id="orderQuantity" value="1" min="1" max="20" class="form-control" onchange="calculateModalTotal()" oninput="calculateModalTotal()">
+          </div>
+        </div>
+
+        <!-- Indicador de total estimado -->
+        <div class="modal-total-bar" id="modalTotalBar">
+          <span>Total estimado:</span>
+          <strong id="modalTotalPrice">$3.500</strong>
+        </div>
+
+        <div class="form-group">
+          <label for="orderName">Tu nombre:</label>
+          <input type="text" id="orderName" placeholder="Ej: Mariana Gómez" required class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="orderNotes">¿Para qué fecha lo querés o comentarios?:</label>
+          <input type="text" id="orderNotes" placeholder="Ej: Para retirar el sábado por la tarde" class="form-control">
+        </div>
+
+        <div class="modal-actions-group">
+          <button type="button" class="btn btn-outline btn-modal-cancel" onclick="closeOrderModal()">
+            <i class="fa-solid fa-arrow-left"></i> Volver
+          </button>
+          <button type="submit" class="btn btn-primary btn-modal-submit">
+            <i class="fa-brands fa-whatsapp"></i> Enviar a WhatsApp
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal de Contacto Profesional: Rosana -->
+  <div class="dev-modal-backdrop" id="devModal">
+    <div class="dev-modal-card">
+      <button class="modal-close-btn" onclick="closeDevModal()" aria-label="Cerrar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="dev-modal-header">
+        <div class="dev-avatar-circle">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <h3 class="dev-modal-title">Diseño & Programación Web</h3>
+        <span class="dev-modal-tagline">Por Rosana</span>
+      </div>
+
+      <div class="dev-modal-body">
+        <p>
+          ¡Hola! Soy <strong>Rosana</strong>, diseñadora y desarrolladora web.
+          Creo páginas web para negocios, emprendimientos y profesionales con diseño personalizado, rápidas y conectadas directo a tu WhatsApp.
+        </p>
+
+        <ul class="dev-services-list">
+          <li><i class="fa-solid fa-check"></i> Páginas web modernas y personalizadas</li>
+          <li><i class="fa-solid fa-check"></i> Catálogos interactivos con pedidos por WhatsApp</li>
+          <li><i class="fa-solid fa-check"></i> 100% optimizadas para ver en celulares</li>
+          <li><i class="fa-solid fa-phone"></i> WhatsApp directo: <strong>2323-523149</strong> (Luján)</li>
+        </ul>
+
+        <div class="dev-contact-buttons">
+          <button class="btn btn-dev-wa" onclick="contactRosanaWhatsApp()">
+            <i class="fa-brands fa-whatsapp"></i> Hablar con Rosana por WhatsApp
+          </button>
+          <button type="button" class="btn btn-outline" onclick="closeDevModal()">
+            Cerrar ventana
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
