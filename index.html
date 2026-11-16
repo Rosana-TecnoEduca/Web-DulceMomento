@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dulce Momento | Hecho en casa, con amor, en Luján</title>
+  <meta name="description" content="Repostería artesanal hecha por encargo en Luján. Conocé las pastafloras y pepas de Dulce Momento y coordiná tu pedido por WhatsApp.">
   
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧁</text></svg>">
@@ -43,7 +44,7 @@
         </div>
       </a>
 
-      <nav class="main-nav" id="mainNav">
+      <nav id="mainNav">
         <ul class="nav-links">
           <li><a href="#inicio" class="nav-link">Inicio</a></li>
           <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
@@ -57,7 +58,7 @@
         <a href="#productos" class="btn btn-primary btn-header">
           Hacé tu pedido
         </a>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -112,9 +113,9 @@
           </div>
 
           <div class="hero-image-frame">
-            <img src="images/hero-cocina.png" 
+            <img src="images/hero-cocina.jpg"
                  alt="Valeria en la cocina preparando repostería casera con vista a la basílica" 
-                 class="hero-img">
+                 class="hero-img" fetchpriority="high" decoding="async">
           </div>
 
           <!-- Badge inferior con borde marrón -->
@@ -214,9 +215,9 @@
         <div class="product-card">
           <div class="product-image-container">
             <span class="product-badge"><i class="fa-solid fa-heart"></i> Hecho en casa</span>
-            <img src="images/pasta-flora.jpg" 
+            <img src="images/pasta-flora.jpg"
                  alt="Pastaflora casera con dulce tradicional" 
-                 class="product-img">
+                 class="product-img" loading="lazy" decoding="async">
           </div>
           
           <div class="product-body">
@@ -233,7 +234,7 @@
                 </div>
                 <div class="option-action">
                   <span class="option-price">$3.500</span>
-                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Mini Pastaflora (1 unidad)', '$3.500')">
+                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Mini Pastaflora (1 unidad)')">
                     <i class="fa-solid fa-bag-shopping"></i> Pedir este
                   </button>
                 </div>
@@ -248,7 +249,7 @@
                 </div>
                 <div class="option-action">
                   <span class="option-price">$4.500</span>
-                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Pastaflora Grande (1 unidad)', '$4.500')">
+                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Pastaflora Grande (1 unidad)')">
                     <i class="fa-solid fa-bag-shopping"></i> Pedir este
                   </button>
                 </div>
@@ -261,9 +262,9 @@
         <div class="product-card">
           <div class="product-image-container">
             <span class="product-badge"><i class="fa-solid fa-heart"></i> Hecho en casa</span>
-            <img src="images/pepas.jpg" 
+            <img src="images/pepas.jpg"
                  alt="Pepas de Batata y Membrillo caseras con dulce artesanal" 
-                 class="product-img">
+                 class="product-img" loading="lazy" decoding="async">
           </div>
           
           <div class="product-body">
@@ -280,7 +281,7 @@
                 </div>
                 <div class="option-action">
                   <span class="option-price">$2.500</span>
-                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Pepas de Batata y Membrillo (3 unidades)', '$2.500')">
+                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Pepas de Batata y Membrillo (3 unidades)')">
                     <i class="fa-solid fa-bag-shopping"></i> Pedir este
                   </button>
                 </div>
@@ -295,7 +296,7 @@
                 </div>
                 <div class="option-action">
                   <span class="option-price">$3.500</span>
-                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Pepas de Batata y Membrillo (6 unidades)', '$3.500')">
+                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Pepas de Batata y Membrillo (6 unidades)')">
                     <i class="fa-solid fa-bag-shopping"></i> Pedir este
                   </button>
                 </div>
@@ -518,7 +519,7 @@
 
   <!-- Floating WhatsApp Launcher Button -->
   <div class="floating-whatsapp-container">
-    <button class="whatsapp-float-btn" id="whatsappToggle" aria-label="Abrir chat de WhatsApp">
+    <button class="whatsapp-float-btn" id="whatsappToggle" aria-label="Abrir chat de WhatsApp" aria-expanded="false" aria-controls="whatsappChatWidget">
       <i class="fa-brands fa-whatsapp"></i>
       <span class="float-tooltip">¡Escribime para pedir!</span>
     </button>
@@ -529,7 +530,7 @@
     <div class="whatsapp-widget-header">
       <div class="agent-info">
         <div class="agent-avatar">
-          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop" alt="Valeria">
+          <img src="images/hero-cocina.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async">
           <span class="status-indicator"></span>
         </div>
         <div class="agent-details">
@@ -555,8 +556,8 @@
       </div>
     </div>
 
-    <form class="whatsapp-widget-footer" id="whatsappForm" onsubmit="handleSendWhatsApp(event)">
-      <input type="text" id="whatsappInput" placeholder="Escribe tu respuesta..." required>
+    <form class="whatsapp-widget-footer" onsubmit="handleSendWhatsApp(event)">
+      <input type="text" id="whatsappInput" placeholder="Escribe tu respuesta..." aria-label="Escribe tu mensaje para WhatsApp" required>
       <button type="submit" class="btn-send-chat" aria-label="Enviar mensaje">
         <i class="fa-solid fa-paper-plane"></i>
       </button>
@@ -564,7 +565,7 @@
   </div>
 
   <!-- Order Modal with customization -->
-  <div class="order-modal-backdrop" id="orderModal">
+  <div class="order-modal-backdrop" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="modalProductTitle" aria-describedby="modalSubtitle">
     <div class="order-modal-card">
       <!-- Botón de cierre visible y destacado -->
       <button class="modal-close-btn" onclick="closeOrderModal()" aria-label="Cerrar ventana">
@@ -574,7 +575,7 @@
       <div class="modal-header">
         <span class="modal-badge"><i class="fa-solid fa-heart"></i> Pedido Artesanal</span>
         <h3 class="modal-title" id="modalProductTitle">Hacer mi pedido</h3>
-        <p class="modal-subtitle">Completá los datos y coordiná directo con Valeria.</p>
+        <p class="modal-subtitle" id="modalSubtitle">Completá los datos y coordiná directo con Valeria.</p>
       </div>
 
       <!-- Cuadro explicativo: ¿A dónde va la información? -->
@@ -612,7 +613,7 @@
 
           <div class="form-group">
             <label for="orderQuantity">Cantidad:</label>
-            <input type="number" id="orderQuantity" value="1" min="1" max="20" class="form-control" onchange="calculateModalTotal()" oninput="calculateModalTotal()">
+            <input type="number" id="orderQuantity" value="1" min="1" max="20" class="form-control" required onchange="calculateModalTotal()" oninput="calculateModalTotal()">
           </div>
         </div>
 
@@ -645,7 +646,7 @@
   </div>
 
   <!-- Modal de Contacto Profesional: Rosana -->
-  <div class="dev-modal-backdrop" id="devModal">
+  <div class="dev-modal-backdrop" id="devModal" role="dialog" aria-modal="true" aria-labelledby="devModalTitle">
     <div class="dev-modal-card">
       <button class="modal-close-btn" onclick="closeDevModal()" aria-label="Cerrar">
         <i class="fa-solid fa-xmark"></i>
@@ -655,7 +656,7 @@
         <div class="dev-avatar-circle">
           <i class="fa-solid fa-laptop-code"></i>
         </div>
-        <h3 class="dev-modal-title">Diseño & Programación Web</h3>
+        <h3 class="dev-modal-title" id="devModalTitle">Diseño & Programación Web</h3>
         <span class="dev-modal-tagline">Por Rosana</span>
       </div>
 
@@ -669,7 +670,7 @@
           <li><i class="fa-solid fa-check"></i> Páginas web modernas y personalizadas</li>
           <li><i class="fa-solid fa-check"></i> Catálogos interactivos con pedidos por WhatsApp</li>
           <li><i class="fa-solid fa-check"></i> 100% optimizadas para ver en celulares</li>
-          <li><i class="fa-solid fa-phone"></i> WhatsApp directo: <strong>2323-523149</strong> (Luján)</li>
+          <li><i class="fa-brands fa-whatsapp"></i> Contacto directo por WhatsApp</li>
         </ul>
 
         <div class="dev-contact-buttons">

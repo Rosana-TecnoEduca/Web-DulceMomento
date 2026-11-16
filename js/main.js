@@ -9,14 +9,13 @@
 // ==========================================
 // Podés cambiar los números de WhatsApp aquí (formato internacional: código país + código área + número sin 15 ni guiones)
 const CONFIG = {
-  // Teléfono de Valeria para los pedidos de Dulce Momento (11 3023-2632)
-  whatsappNumber: '5491130232632', 
-  instagramUser: 'dulce.momento2627',
+  // Teléfono de Valeria para los pedidos de Dulce Momento.
+  whatsappNumber: '5491130232632',
   businessName: 'Dulce Momento',
   bakerName: 'Valeria',
 
-  // Teléfono de Rosana (para recibir consultas de clientes que quieran su propia página web)
-  developerWhatsApp: '5492323523149', // WhatsApp de Rosana (Luján: 2323 523149)
+  // Teléfono de Rosana para consultas sobre desarrollo web.
+  developerWhatsApp: '5492323523149',
   developerName: 'Rosana'
 };
 
@@ -24,7 +23,6 @@ const CONFIG = {
 // ELEMENTOS DEL DOM
 // ==========================================
 const mobileToggle = document.getElementById('mobileToggle');
-const mainNav = document.getElementById('mainNav');
 const navLinksUl = document.querySelector('.nav-links');
 const header = document.getElementById('header');
 
@@ -32,7 +30,6 @@ const header = document.getElementById('header');
 const whatsappToggle = document.getElementById('whatsappToggle');
 const whatsappChatWidget = document.getElementById('whatsappChatWidget');
 const closeWidgetBtn = document.getElementById('closeWidgetBtn');
-const whatsappForm = document.getElementById('whatsappForm');
 const whatsappInput = document.getElementById('whatsappInput');
 
 // Modal de Pedidos
@@ -49,21 +46,28 @@ const modalTotalPrice = document.getElementById('modalTotalPrice');
 const devModal = document.getElementById('devModal');
 
 let currentUnitPrice = 3500;
+let orderModalTrigger = null;
+let devModalTrigger = null;
 
 // ==========================================
 // MENÚ MÓVIL Y NAVEGACIÓN PRECISA POR SECCIONES
 // ==========================================
-if (mobileToggle) {
+function setMobileMenuOpen(isOpen) {
+  if (!mobileToggle || !navLinksUl) return;
+
+  navLinksUl.classList.toggle('active', isOpen);
+  mobileToggle.setAttribute('aria-expanded', String(isOpen));
+  mobileToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+
+  const icon = mobileToggle.querySelector('i');
+  if (!icon) return;
+  icon.classList.toggle('fa-bars', !isOpen);
+  icon.classList.toggle('fa-xmark', isOpen);
+}
+
+if (mobileToggle && navLinksUl) {
   mobileToggle.addEventListener('click', () => {
-    navLinksUl.classList.toggle('active');
-    const icon = mobileToggle.querySelector('i');
-    if (navLinksUl.classList.contains('active')) {
-      icon.classList.remove('fa-bars');
-      icon.classList.add('fa-xmark');
-    } else {
-      icon.classList.remove('fa-xmark');
-      icon.classList.add('fa-bars');
-    }
+    setMobileMenuOpen(!navLinksUl.classList.contains('active'));
   });
 }
 
@@ -89,12 +93,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
       // Cerrar menú móvil si estaba abierto
       if (navLinksUl && navLinksUl.classList.contains('active')) {
-        navLinksUl.classList.remove('active');
-        const icon = mobileToggle.querySelector('i');
-        if (icon) {
-          icon.classList.remove('fa-xmark');
-          icon.classList.add('fa-bars');
-        }
+        setMobileMenuOpen(false);
       }
     }
   });
@@ -102,6 +101,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Sombra en el header al hacer scroll
 window.addEventListener('scroll', () => {
+  if (!header) return;
   if (window.scrollY > 40) {
     header.style.boxShadow = '0 4px 20px rgba(70, 43, 27, 0.12)';
   } else {
@@ -112,20 +112,29 @@ window.addEventListener('scroll', () => {
 // ==========================================
 // CONTROL DEL WIDGET DE WHATSAPP FLOTANTE
 // ==========================================
+function setWhatsAppWidgetOpen(isOpen) {
+  if (!whatsappToggle || !whatsappChatWidget) return;
+
+  whatsappChatWidget.classList.toggle('active', isOpen);
+  whatsappToggle.setAttribute('aria-expanded', String(isOpen));
+  whatsappToggle.setAttribute('aria-label', isOpen ? 'Cerrar chat de WhatsApp' : 'Abrir chat de WhatsApp');
+
+  if (isOpen && whatsappInput) {
+    setTimeout(() => {
+      if (whatsappChatWidget.classList.contains('active')) whatsappInput.focus();
+    }, 200);
+  }
+}
+
 if (whatsappToggle && whatsappChatWidget) {
   whatsappToggle.addEventListener('click', () => {
-    whatsappChatWidget.classList.toggle('active');
-    if (whatsappChatWidget.classList.contains('active')) {
-      setTimeout(() => {
-        whatsappInput.focus();
-      }, 200);
-    }
+    setWhatsAppWidgetOpen(!whatsappChatWidget.classList.contains('active'));
   });
 }
 
-if (closeWidgetBtn) {
+if (closeWidgetBtn && whatsappChatWidget) {
   closeWidgetBtn.addEventListener('click', () => {
-    whatsappChatWidget.classList.remove('active');
+    setWhatsAppWidgetOpen(false);
   });
 }
 
@@ -136,10 +145,10 @@ function handleSendWhatsApp(event) {
   if (!message) return;
 
   const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
-  window.open(url, '_blank');
+  window.open(url, '_blank', 'noopener,noreferrer');
   
   whatsappInput.value = '';
-  whatsappChatWidget.classList.remove('active');
+  setWhatsAppWidgetOpen(false);
 }
 
 // Opciones rápidas del chat
@@ -152,13 +161,14 @@ function selectQuickChat(text) {
 function openWhatsAppChat(customMessage) {
   const message = customMessage || `¡Hola ${CONFIG.bakerName}! Me gustaría hacerte una consulta sobre ${CONFIG.businessName}.`;
   const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
-  window.open(url, '_blank');
+  window.open(url, '_blank', 'noopener,noreferrer');
 }
 
 // ==========================================
 // MODAL DE PEDIDO PERSONALIZADO (VALERIA)
 // ==========================================
-function openOrderModal(productName, priceString) {
+function openOrderModal(productName) {
+  orderModalTrigger = document.activeElement;
   orderModal.classList.add('active');
   document.body.style.overflow = 'hidden';
 
@@ -191,22 +201,30 @@ function openOrderModal(productName, priceString) {
 }
 
 function closeOrderModal() {
+  if (!orderModal.classList.contains('active')) return;
   orderModal.classList.remove('active');
-  document.body.style.overflow = '';
+  document.body.style.overflow = devModal && devModal.classList.contains('active') ? 'hidden' : '';
+  if (orderModalTrigger instanceof HTMLElement) orderModalTrigger.focus();
+  orderModalTrigger = null;
 }
 
 // Actualizar precio unitario según el producto seleccionado en el dropdown
 function updateSelectedProductPrice() {
   if (!orderProductSelect) return;
   const selectedOption = orderProductSelect.options[orderProductSelect.selectedIndex];
-  currentUnitPrice = parseInt(selectedOption.getAttribute('data-price')) || 0;
+  currentUnitPrice = parseInt(selectedOption.getAttribute('data-price'), 10) || 0;
   modalProductTitle.textContent = selectedOption.value;
   calculateModalTotal();
 }
 
 // Calcular total estimado
 function calculateModalTotal() {
-  const qty = parseInt(orderQuantityInput.value) || 1;
+  const qty = parseInt(orderQuantityInput.value, 10);
+  if (!orderQuantityInput.checkValidity() || !Number.isFinite(qty)) {
+    modalTotalPrice.textContent = '—';
+    return;
+  }
+
   if (currentUnitPrice > 0) {
     const total = currentUnitPrice * qty;
     modalTotalPrice.textContent = `$${total.toLocaleString('es-AR')}`;
@@ -222,7 +240,7 @@ function handleOrderSubmit(event) {
 
   const product = orderProductSelect.value;
   const flavor = orderFlavorSelect.value;
-  const quantity = parseInt(orderQuantityInput.value) || 1;
+  const quantity = parseInt(orderQuantityInput.value, 10);
   const name = orderNameInput.value.trim();
   const notes = orderNotesInput.value.trim();
 
@@ -243,7 +261,7 @@ function handleOrderSubmit(event) {
     `\n¿Podemos coordinar la disponibilidad y el retiro en Luján? ¡Muchas gracias!`;
 
   const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
-  window.open(url, '_blank');
+  window.open(url, '_blank', 'noopener,noreferrer');
 
   closeOrderModal();
 }
@@ -253,15 +271,20 @@ function handleOrderSubmit(event) {
 // ==========================================
 function openDevModal() {
   if (devModal) {
+    devModalTrigger = document.activeElement;
     devModal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    devModal.querySelector('.modal-close-btn').focus();
   }
 }
 
 function closeDevModal() {
   if (devModal) {
+    if (!devModal.classList.contains('active')) return;
     devModal.classList.remove('active');
-    document.body.style.overflow = '';
+    document.body.style.overflow = orderModal && orderModal.classList.contains('active') ? 'hidden' : '';
+    if (devModalTrigger instanceof HTMLElement) devModalTrigger.focus();
+    devModalTrigger = null;
   }
 }
 
@@ -269,7 +292,7 @@ function closeDevModal() {
 function contactRosanaWhatsApp() {
   const message = `¡Hola ${CONFIG.developerName}! Vi la página web que diseñaste para Dulce Momento y me encantó. Me gustaría consultar para crear una web para mi negocio/emprendimiento.`;
   const url = `https://wa.me/${CONFIG.developerWhatsApp}?text=${encodeURIComponent(message)}`;
-  window.open(url, '_blank');
+  window.open(url, '_blank', 'noopener,noreferrer');
   closeDevModal();
 }
 
@@ -279,10 +302,44 @@ window.addEventListener('click', (event) => {
   if (event.target === devModal) closeDevModal();
 });
 
+function trapDialogFocus(event, dialog) {
+  if (event.key !== 'Tab') return;
+
+  const focusableElements = Array.from(dialog.querySelectorAll(
+    'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+  )).filter(element => element.getClientRects().length > 0);
+
+  if (focusableElements.length === 0) {
+    event.preventDefault();
+    return;
+  }
+
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+
+  if (event.shiftKey && (document.activeElement === firstElement || !dialog.contains(document.activeElement))) {
+    event.preventDefault();
+    lastElement.focus();
+  } else if (!event.shiftKey && (document.activeElement === lastElement || !dialog.contains(document.activeElement))) {
+    event.preventDefault();
+    firstElement.focus();
+  }
+}
+
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     closeOrderModal();
     closeDevModal();
-    if (whatsappChatWidget) whatsappChatWidget.classList.remove('active');
+    setWhatsAppWidgetOpen(false);
+    if (navLinksUl && navLinksUl.classList.contains('active')) {
+      setMobileMenuOpen(false);
+    }
+    return;
+  }
+
+  if (orderModal.classList.contains('active')) {
+    trapDialogFocus(event, orderModal);
+  } else if (devModal && devModal.classList.contains('active')) {
+    trapDialogFocus(event, devModal);
   }
 });
