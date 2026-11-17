@@ -638,6 +638,12 @@ strong {
   margin-bottom: 30px;
 }
 
+.about-card-dark strong,
+.dark-card-text strong {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
 .dark-card-footer {
   display: flex;
   align-items: center;
