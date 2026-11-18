@@ -25,8 +25,8 @@
   <!-- Top Announcement Bar -->
   <div class="top-announcement">
     <div class="container announcement-content">
-      <span class="announcement-badge"><i class="fa-solid fa-heart"></i> Repostería artesanal</span>
-      <span>Envíos coordinados y retiro en casa · Luján, Buenos Aires</span>
+      <span class="announcement-badge"><i class="fa-solid fa-tag"></i> Promos de Noviembre</span>
+      <span>¡Combos especiales toda la semana! · <a href="#promociones" class="announcement-promo-link">Ver promociones <i class="fa-solid fa-arrow-right"></i></a></span>
     </div>
   </div>
 
@@ -48,6 +48,7 @@
         <ul class="nav-links">
           <li><a href="#inicio" class="nav-link">Inicio</a></li>
           <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+          <li><a href="#promociones" class="nav-link nav-link-promo">Promociones <span class="nav-pill-nov">Nov</span></a></li>
           <li><a href="#productos" class="nav-link">Productos</a></li>
           <li><a href="#como-pedir" class="nav-link">Cómo pedir</a></li>
           <li><a href="#por-que-elegirnos" class="nav-link">Por qué elegirnos</a></li>
@@ -120,7 +121,9 @@
 
           <!-- Badge inferior con borde marrón -->
           <div class="floating-tag tag-bottom">
-            <div class="tag-icon-circle
+            <div class="tag-icon-circle">
+              <i class="fa-solid fa-heart"></i>
+            </div>
             <div>
               <strong>De mi cocina a tu mesa</strong>
               <small>Luján, Buenos Aires</small>
@@ -194,6 +197,243 @@
     </div>
   </section>
 
+  <!-- Section: Promociones del Mes (Noviembre) -->
+  <section class="promos-section" id="promociones">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="pill-badge pill-pink">
+          <i class="fa-solid fa-calendar-star"></i> Solo por mes de noviembre
+        </div>
+        <span class="section-label">PROMOCIONES DEL MES</span>
+        <h2 class="section-title">✨ Promos Dulce Momento</h2>
+        <div class="promo-header-banner">
+          <span class="promo-banner-badge">TODA LA SEMANA</span>
+          <p class="promo-banner-text">Podés aprovechar la promo o comprar normal, como quieras ✨</p>
+        </div>
+      </div>
+
+      <div class="promos-grid">
+        <!-- Promo 1 -->
+        <article class="promo-card">
+          <div class="promo-image-container">
+            <span class="promo-badge-tag"><i class="fa-solid fa-star"></i> Promo 1</span>
+            <span class="promo-savings-badge"><i class="fa-solid fa-tag"></i> Ahorrás $500</span>
+            <img src="images/Promo 1.jfif" 
+                 alt="Promo 1 - Combo Clásico: Mini Pastafrola más Pepas artesanales" 
+                 class="promo-img" loading="lazy" decoding="async">
+          </div>
+          <div class="promo-body">
+            <div class="promo-card-top">
+              <span class="promo-category">COMBO CLÁSICO</span>
+              <span class="promo-feature-tag"><i class="fa-solid fa-mug-hot"></i> Para la merienda</span>
+            </div>
+            <h3 class="promo-title">Combo Clásico</h3>
+            <p class="promo-desc">El clásico de siempre para acompañar unos ricos mates o café.</p>
+            <div class="promo-combo-box">
+              <span class="promo-item-pill"><i class="fa-solid fa-check"></i> Mini Pastafrola</span>
+              <span class="promo-plus-sign">+</span>
+              <span class="promo-item-pill"><i class="fa-solid fa-check"></i> Pepas</span>
+            </div>
+            <div class="promo-pricing-box">
+              <div class="promo-prices">
+                <span class="promo-old-price"><span class="price-strikethrough">$5.500</span></span>
+                <span class="promo-current-price">$5.000</span>
+              </div>
+              <span class="promo-badge-note">Precio Promo</span>
+            </div>
+            <button class="btn btn-primary btn-promo-cta" onclick="openOrderModal('Promo 1 - Combo Clásico')">
+              <i class="fa-brands fa-whatsapp"></i> Pedir Promo 1
+            </button>
+          </div>
+        </article>
+
+        <!-- Promo 2 -->
+        <article class="promo-card">
+          <div class="promo-image-container">
+            <span class="promo-badge-tag"><i class="fa-solid fa-star"></i> Promo 2</span>
+            <span class="promo-savings-badge"><i class="fa-solid fa-tag"></i> Ahorrás $500</span>
+            <img src="images/Promo 2.jfif" 
+                 alt="Promo 2 - Combo Mediana: Pastafrola Mediana más Masitas artesanales" 
+                 class="promo-img" loading="lazy" decoding="async">
+          </div>
+          <div class="promo-body">
+            <div class="promo-card-top">
+              <span class="promo-category">COMBO MEDIANA</span>
+              <span class="promo-feature-tag"><i class="fa-solid fa-heart"></i> Para dos o más</span>
+            </div>
+            <h3 class="promo-title">Combo Mediana</h3>
+            <p class="promo-desc">Pastafrola más rendidora acompañada de masitas caseras.</p>
+            <div class="promo-combo-box">
+              <span class="promo-item-pill"><i class="fa-solid fa-check"></i> Pastafrola Mediana</span>
+              <span class="promo-plus-sign">+</span>
+              <span class="promo-item-pill"><i class="fa-solid fa-check"></i> Masitas</span>
+            </div>
+            <div class="promo-pricing-box">
+              <div class="promo-prices">
+                <span class="promo-old-price"><span class="price-strikethrough">$6.500</span></span>
+                <span class="promo-current-price">$6.000</span>
+              </div>
+              <span class="promo-badge-note">Precio Promo</span>
+            </div>
+            <button class="btn btn-primary btn-promo-cta" onclick="openOrderModal('Promo 2 - Combo Mediana')">
+              <i class="fa-brands fa-whatsapp"></i> Pedir Promo 2
+            </button>
+          </div>
+        </article>
+
+        <!-- Promo 3 -->
+        <article class="promo-card">
+          <div class="promo-image-container">
+            <span class="promo-badge-tag"><i class="fa-solid fa-star"></i> Promo 3</span>
+            <span class="promo-savings-badge"><i class="fa-solid fa-tag"></i> Ahorrás $500</span>
+            <img src="images/Promo 3.jfif" 
+                 alt="Promo 3 - Combo Grande Familiar: Pastafrola Grande más Pepas y Masitas" 
+                 class="promo-img" loading="lazy" decoding="async">
+          </div>
+          <div class="promo-body">
+            <div class="promo-card-top">
+              <span class="promo-category">COMBO FAMILIAR</span>
+              <span class="promo-feature-tag"><i class="fa-solid fa-people-roof"></i> Super Familiar</span>
+            </div>
+            <h3 class="promo-title">Combo Grande Familiar</h3>
+            <p class="promo-desc">El combo más completo para la mesa familiar y reuniones.</p>
+            <div class="promo-combo-box">
+              <span class="promo-item-pill"><i class="fa-solid fa-check"></i> Pastafrola Grande</span>
+              <span class="promo-plus-sign">+</span>
+              <span class="promo-item-pill"><i class="fa-solid fa-check"></i> Pepas</span>
+              <span class="promo-plus-sign">+</span>
+              <span class="promo-item-pill"><i class="fa-solid fa-check"></i> Masitas</span>
+            </div>
+            <div class="promo-pricing-box">
+              <div class="promo-prices">
+                <span class="promo-old-price"><span class="price-strikethrough">$10.500</span></span>
+                <span class="promo-current-price">$10.000</span>
+              </div>
+              <span class="promo-badge-note">Precio Promo</span>
+            </div>
+            <button class="btn btn-primary btn-promo-cta" onclick="openOrderModal('Promo 3 - Combo Grande Familiar')">
+              <i class="fa-brands fa-whatsapp"></i> Pedir Promo 3
+            </button>
+          </div>
+        </article>
+
+        <!-- Promo 4 -->
+        <article class="promo-card">
+          <div class="promo-image-container">
+            <span class="promo-badge-tag"><i class="fa-solid fa-star"></i> Promo 4</span>
+            <span class="promo-savings-badge"><i class="fa-solid fa-tag"></i> Ahorrás $1.000</span>
+            <img src="images/Promo 4.jfif" 
+                 alt="Promo 4 - 2x1 Masitas: 2 paquetes de Masitas caseras" 
+                 class="promo-img" loading="lazy" decoding="async">
+          </div>
+          <div class="promo-body">
+            <div class="promo-card-top">
+              <span class="promo-category">PROMO 2X1</span>
+              <span class="promo-feature-tag"><i class="fa-solid fa-layer-group"></i> 2 paquetes de masitas</span>
+            </div>
+            <h3 class="promo-title">2x1 Masitas</h3>
+            <p class="promo-desc">Doble paquete de masitas caseras para que rindan el doble.</p>
+            <div class="promo-combo-box">
+              <span class="promo-item-pill"><i class="fa-solid fa-check"></i> 2 paquetes de Masitas</span>
+            </div>
+            <div class="promo-pricing-box">
+              <div class="promo-prices">
+                <span class="promo-old-price"><span class="price-strikethrough">$6.000</span></span>
+                <span class="promo-current-price">$5.000</span>
+              </div>
+              <span class="promo-badge-note">Precio Promo</span>
+            </div>
+            <button class="btn btn-primary btn-promo-cta" onclick="openOrderModal('Promo 4 - 2x1 Masitas')">
+              <i class="fa-brands fa-whatsapp"></i> Pedir Promo 4
+            </button>
+          </div>
+        </article>
+
+        <!-- Promo 5 -->
+        <article class="promo-card">
+          <div class="promo-image-container">
+            <span class="promo-badge-tag"><i class="fa-solid fa-star"></i> Promo 5</span>
+            <span class="promo-savings-badge"><i class="fa-solid fa-tag"></i> Ahorrás $500</span>
+            <img src="images/Promo 5.jfif" 
+                 alt="Promo 5 - Doble Mini: 2 Mini Pastafrolas caseras" 
+                 class="promo-img" loading="lazy" decoding="async">
+          </div>
+          <div class="promo-body">
+            <div class="promo-card-top">
+              <span class="promo-category">DOBLE MINI</span>
+              <span class="promo-feature-tag"><i class="fa-solid fa-cookie"></i> 2 mini pastafrolas</span>
+            </div>
+            <h3 class="promo-title">Doble Mini</h3>
+            <p class="promo-desc">Dos mini pastafrolas para probar distintos dulces o compartir.</p>
+            <div class="promo-combo-box">
+              <span class="promo-item-pill"><i class="fa-solid fa-check"></i> 2 Mini Pastafrolas</span>
+            </div>
+            <div class="promo-pricing-box">
+              <div class="promo-prices">
+                <span class="promo-old-price"><span class="price-strikethrough">$5.000</span></span>
+                <span class="promo-current-price">$4.500</span>
+              </div>
+              <span class="promo-badge-note">Precio Promo</span>
+            </div>
+            <button class="btn btn-primary btn-promo-cta" onclick="openOrderModal('Promo 5 - Doble Mini')">
+              <i class="fa-brands fa-whatsapp"></i> Pedir Promo 5
+            </button>
+          </div>
+        </article>
+
+        <!-- Promo 6 -->
+        <article class="promo-card">
+          <div class="promo-image-container">
+            <span class="promo-badge-tag"><i class="fa-solid fa-star"></i> Promo 6</span>
+            <span class="promo-savings-badge"><i class="fa-solid fa-tag"></i> Ahorrás $500</span>
+            <img src="images/Promo 6.jfif" 
+                 alt="Promo 6 - Dulce para compartir: Pastafrola Mediana más Mini Pastafrola" 
+                 class="promo-img" loading="lazy" decoding="async">
+          </div>
+          <div class="promo-body">
+            <div class="promo-card-top">
+              <span class="promo-category">PARA COMPARTIR</span>
+              <span class="promo-feature-tag"><i class="fa-solid fa-hand-holding-heart"></i> Dúo de pastafrolas</span>
+            </div>
+            <h3 class="promo-title">Dulce para compartir</h3>
+            <p class="promo-desc">Una pastafrola mediana y una mini para tener más variedad.</p>
+            <div class="promo-combo-box">
+              <span class="promo-item-pill"><i class="fa-solid fa-check"></i> Pastafrola Mediana</span>
+              <span class="promo-plus-sign">+</span>
+              <span class="promo-item-pill"><i class="fa-solid fa-check"></i> Mini Pastafrola</span>
+            </div>
+            <div class="promo-pricing-box">
+              <div class="promo-prices">
+                <span class="promo-old-price"><span class="price-strikethrough">$6.000</span></span>
+                <span class="promo-current-price">$5.500</span>
+              </div>
+              <span class="promo-badge-note">Precio Promo</span>
+            </div>
+            <button class="btn btn-primary btn-promo-cta" onclick="openOrderModal('Promo 6 - Dulce para compartir')">
+              <i class="fa-brands fa-whatsapp"></i> Pedir Promo 6
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Banner inferior de las promos -->
+      <div class="promo-footer-banner">
+        <div class="promo-footer-info">
+          <i class="fa-solid fa-bag-shopping promo-footer-icon"></i>
+          <div>
+            <strong>¿Querés pedir una promo o combinar con otros productos?</strong>
+            <p>Hacemos todo fresco por encargo en Luján. Podés aprovechar la promo o comprar normal.</p>
+          </div>
+        </div>
+        <div class="promo-footer-actions">
+          <button class="btn btn-pink-solid" onclick="openWhatsAppChat('¡Hola Valeria! Me gustaría aprovechar las promociones de Noviembre.')">
+            <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Section: Nuestros Productos -->
   <section class="products-section" id="productos">
     <div class="container">
@@ -220,30 +460,30 @@
           
           <div class="product-body">
             <h3 class="product-title">Pastaflora</h3>
-            <p class="product-desc">Masa casera con dulce, la de siempre.</p>
+            <p class="product-desc">Masa casera con dulce, receta clásica de la casa.</p>
 
             <div class="product-options">
-              <!-- Opción 1 -->
+              <!-- Opción 1: Mediana -->
               <div class="option-row">
                 <div class="option-info">
-                  <span class="option-tag">EL ANTOJO PERFECTO</span>
-                  <h4 class="option-name">Mini Pastaflora · 1 unidad</h4>
-                  <p class="option-detail">Ideal para un antojo, masa casera con dulce.</p>
+                  <span class="option-tag">TAMAÑO MEDIANO</span>
+                  <h4 class="option-name">Pastaflora Mediana · 1 u.</h4>
+                  <p class="option-detail">Más rendidora, ideal para compartir de a dos.</p>
                 </div>
                 <div class="option-action">
                   <span class="option-price">$3.500</span>
-                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Mini Pastaflora (1 unidad)')">
+                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Pastaflora Mediana (1 unidad)')">
                     <i class="fa-solid fa-bag-shopping"></i> Pedir este
                   </button>
                 </div>
               </div>
 
-              <!-- Opción 2 -->
+              <!-- Opción 2: Grande -->
               <div class="option-row">
                 <div class="option-info">
                   <span class="option-tag">PARA COMPARTIR</span>
-                  <h4 class="option-name">Pastaflora Grande · 1 unidad</h4>
-                  <p class="option-detail">La de siempre, más grande, para compartir en familia.</p>
+                  <h4 class="option-name">Pastaflora Grande · 1 u.</h4>
+                  <p class="option-detail">La de siempre, más grande, para toda la familia.</p>
                 </div>
                 <div class="option-action">
                   <span class="option-price">$4.500</span>
@@ -256,30 +496,77 @@
           </div>
         </div>
 
-        <!-- Producto 2: Pepas de Batata y Membrillo -->
+        <!-- Producto 2: Pepas -->
         <div class="product-card">
           <div class="product-image-container">
             <span class="product-badge"><i class="fa-solid fa-heart"></i> Hecho en casa</span>
             <img src="images/pepas.jpg"
-                 alt="Pepas de Batata y Membrillo caseras con dulce artesanal" 
+                 alt="Pepas caseras de batata y membrillo artesanal" 
                  class="product-img" loading="lazy" decoding="async">
           </div>
           
           <div class="product-body">
-            <h3 class="product-title">Pepas de Batata y Membrillo</h3>
-            <p class="product-desc">Tiernas, caseras y con el corazón de dulce.</p>
+            <h3 class="product-title">Pepas <small class="product-title-sub">(Batata y Membrillo)</small></h3>
+            <p class="product-desc">Tiernas, caseras y con corazón de dulce artesanal.</p>
+
+            <div class="product-options">
+              <!-- Opción 1: Media docena (6 u.) -->
+              <div class="option-row">
+                <div class="option-info">
+                  <span class="option-tag">MEDIA DOCENA</span>
+                  <h4 class="option-name">Pepas caseras · 6 u. (media docena)</h4>
+                  <p class="option-detail">Tiernas, caseras y con el corazón de dulce artesanal.</p>
+                </div>
+                <div class="option-action">
+                  <span class="option-price">$3.000</span>
+                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Pepas de Batata y Membrillo (6 unidades - media docena)')">
+                    <i class="fa-solid fa-bag-shopping"></i> Pedir este
+                  </button>
+                </div>
+              </div>
+
+              <!-- Opción 2: Docena (12 u.) -->
+              <div class="option-row">
+                <div class="option-info">
+                  <span class="option-tag">DOCENA COMPLETA</span>
+                  <h4 class="option-name">Pepas caseras · 12 u. (una docena)</h4>
+                  <p class="option-detail">La misma receta, cantidad ideal para compartir en familia.</p>
+                </div>
+                <div class="option-action">
+                  <span class="option-price">$6.000</span>
+                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Pepas de Batata y Membrillo (12 unidades - una docena)')">
+                    <i class="fa-solid fa-bag-shopping"></i> Pedir este
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 3: Masitas Caseras -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <span class="product-badge"><i class="fa-solid fa-heart"></i> Hecho en casa</span>
+            <img src="images/Masitas.jfif"
+                 alt="Masitas artesanales caseras recién horneadas" 
+                 class="product-img" loading="lazy" decoding="async">
+          </div>
+          
+          <div class="product-body">
+            <h3 class="product-title">Masitas</h3>
+            <p class="product-desc">Crocantes, suaves y listas para la merienda.</p>
 
             <div class="product-options">
               <!-- Opción 1 -->
               <div class="option-row">
                 <div class="option-info">
-                  <span class="option-tag">CLÁSICAS DE LA CASA</span>
-                  <h4 class="option-name">Pepas de Batata y Membrillo · 3 unidades</h4>
-                  <p class="option-detail">Tiernas, caseras y con el corazón de dulce.</p>
+                  <span class="option-tag">HORNEADAS EN CASA</span>
+                  <h4 class="option-name">Masitas Caseras · 1 paq.</h4>
+                  <p class="option-detail">Receta tradicional, frescas para la merienda.</p>
                 </div>
                 <div class="option-action">
-                  <span class="option-price">$2.500</span>
-                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Pepas de Batata y Membrillo (3 unidades)')">
+                  <span class="option-price">$3.000</span>
+                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Masitas Caseras (1 paquete)')">
                     <i class="fa-solid fa-bag-shopping"></i> Pedir este
                   </button>
                 </div>
@@ -289,12 +576,12 @@
               <div class="option-row">
                 <div class="option-info">
                   <span class="option-tag">MÁS PARA COMPARTIR</span>
-                  <h4 class="option-name">Pepas de Batata y Membrillo · 6 unidades</h4>
-                  <p class="option-detail">La misma receta, en cantidad para compartir.</p>
+                  <h4 class="option-name">Masitas Caseras · 2 paq.</h4>
+                  <p class="option-detail">Doble paquete para disfrutar en familia.</p>
                 </div>
                 <div class="option-action">
-                  <span class="option-price">$3.500</span>
-                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Pepas de Batata y Membrillo (6 unidades)')">
+                  <span class="option-price">$6.000</span>
+                  <button class="btn btn-sm btn-order" onclick="openOrderModal('Masitas Caseras (2 paquetes)')">
                     <i class="fa-solid fa-bag-shopping"></i> Pedir este
                   </button>
                 </div>
@@ -309,10 +596,10 @@
         <div class="callout-left">
           <span class="callout-tag">¿POR CUÁL EMPEZAMOS?</span>
           <h3 class="callout-product">Mini Pastaflora · 1 unidad</h3>
-          <p class="callout-desc"><strong>$3.500</strong> · Ideal para un antojo, masa casera con dulce.</p>
+          <p class="callout-desc"><strong>$2.500</strong> · Ideal para un antojo, masa casera con dulce.</p>
         </div>
         <div class="callout-buttons">
-          <button class="btn btn-pink-solid" onclick="openWhatsAppChat('¡Hola Valeria! Quiero pedir 1 Mini Pastaflora ($3.500).')">
+          <button class="btn btn-pink-solid" onclick="openWhatsAppChat('¡Hola Valeria! Quiero pedir 1 Mini Pastaflora ($2.500).')">
             <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
           </button>
           <a href="https://instagram.com/dulce.momento2627" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">
@@ -546,11 +833,28 @@
         <p>¿Qué dulce casero tenés ganas de disfrutar hoy? Hago todo por encargo para que te llegue súper fresco.</p>
       </div>
 
-      <div class="quick-options-chips">
-        <button class="chip" onclick="selectQuickChat('Quiero pedir una Mini Pastaflora')">Mini Pastaflora</button>
-        <button class="chip" onclick="selectQuickChat('Quiero pedir una Pastaflora Grande')">Pastaflora Grande</button>
-        <button class="chip" onclick="selectQuickChat('Quiero pedir Pepas x 3 unidades')">Pepas x 3</button>
-        <button class="chip" onclick="selectQuickChat('Quiero pedir Pepas x 6 unidades')">Pepas x 6</button>
+      <div class="chat-options-group">
+        <span class="chat-group-label"><i class="fa-solid fa-star"></i> Promos de Noviembre:</span>
+        <div class="quick-options-chips">
+          <button type="button" class="chip chip-promo" onclick="selectQuickChat('Quiero pedir la Promo 1 - Combo Clásico ($5.000)')">Promo 1 (Clásico)</button>
+          <button type="button" class="chip chip-promo" onclick="selectQuickChat('Quiero pedir la Promo 2 - Combo Mediana ($6.000)')">Promo 2 (Mediana)</button>
+          <button type="button" class="chip chip-promo" onclick="selectQuickChat('Quiero pedir la Promo 3 - Combo Grande Familiar ($10.000)')">Promo 3 (Familiar)</button>
+          <button type="button" class="chip chip-promo" onclick="selectQuickChat('Quiero pedir la Promo 4 - 2x1 Masitas ($5.000)')">Promo 4 (2x1 Masitas)</button>
+          <button type="button" class="chip chip-promo" onclick="selectQuickChat('Quiero pedir la Promo 5 - Doble Mini ($4.500)')">Promo 5 (Doble Mini)</button>
+          <button type="button" class="chip chip-promo" onclick="selectQuickChat('Quiero pedir la Promo 6 - Dulce para compartir ($5.500)')">Promo 6 (Compartir)</button>
+        </div>
+      </div>
+
+      <div class="chat-options-group">
+        <span class="chat-group-label"><i class="fa-solid fa-cake-candles"></i> Productos Habituales:</span>
+        <div class="quick-options-chips">
+          <button type="button" class="chip" onclick="selectQuickChat('Quiero pedir una Mini Pastaflora ($2.500)')">Mini Pastaflora</button>
+          <button type="button" class="chip" onclick="selectQuickChat('Quiero pedir una Pastaflora Mediana ($3.500)')">Pastaflora Mediana</button>
+          <button type="button" class="chip" onclick="selectQuickChat('Quiero pedir una Pastaflora Grande ($4.500)')">Pastaflora Grande</button>
+          <button type="button" class="chip" onclick="selectQuickChat('Quiero pedir Masitas Caseras ($3.000)')">Masitas</button>
+          <button type="button" class="chip" onclick="selectQuickChat('Quiero pedir Pepas - Media docena / 6 u. ($3.000)')">Pepas x 6 (media docena)</button>
+          <button type="button" class="chip" onclick="selectQuickChat('Quiero pedir Pepas - Una docena / 12 u. ($6.000)')">Pepas x 12 (una docena)</button>
+        </div>
       </div>
     </div>
 
@@ -589,13 +893,26 @@
 
       <form id="orderForm" onsubmit="handleOrderSubmit(event)">
         <div class="form-group">
-          <label for="orderProductSelect">Producto elegido:</label>
+          <label for="orderProductSelect">Producto o Promo elegida:</label>
           <select id="orderProductSelect" class="form-control" onchange="updateSelectedProductPrice()">
-            <option value="Mini Pastaflora (1 unidad)" data-price="3500">Mini Pastaflora · 1 unidad ($3.500)</option>
-            <option value="Pastaflora Grande (1 unidad)" data-price="4500">Pastaflora Grande · 1 unidad ($4.500)</option>
-            <option value="Pepas de Batata y Membrillo (3 unidades)" data-price="2500">Pepas de Batata y Membrillo · 3 unidades ($2.500)</option>
-            <option value="Pepas de Batata y Membrillo (6 unidades)" data-price="3500">Pepas de Batata y Membrillo · 6 unidades ($3.500)</option>
-            <option value="Consulta General / Pedido Personalizado" data-price="0">Consulta General / Pedido Personalizado</option>
+            <optgroup label="✨ Promociones del Mes (Noviembre)">
+              <option value="Promo 1 - Combo Clásico (Mini Pastafrola + Pepas)" data-price="5000">Promo 1 - Combo Clásico ($5.000)</option>
+              <option value="Promo 2 - Combo Mediana (Pastafrola Mediana + Masitas)" data-price="6000">Promo 2 - Combo Mediana ($6.000)</option>
+              <option value="Promo 3 - Combo Grande Familiar (Pastafrola Grande + Pepas + Masitas)" data-price="10000">Promo 3 - Combo Grande Familiar ($10.000)</option>
+              <option value="Promo 4 - 2x1 Masitas (2 paquetes de Masitas)" data-price="5000">Promo 4 - 2x1 Masitas ($5.000)</option>
+              <option value="Promo 5 - Doble Mini (2 Mini Pastafrolas)" data-price="4500">Promo 5 - Doble Mini ($4.500)</option>
+              <option value="Promo 6 - Dulce para compartir (Pastafrola Mediana + Mini)" data-price="5500">Promo 6 - Dulce para compartir ($5.500)</option>
+            </optgroup>
+            <optgroup label="🧁 Productos Individuales">
+              <option value="Mini Pastaflora (1 unidad)" data-price="2500">Mini Pastaflora · 1 unidad ($2.500)</option>
+              <option value="Pastaflora Mediana (1 unidad)" data-price="3500">Pastaflora Mediana · 1 unidad ($3.500)</option>
+              <option value="Pastaflora Grande (1 unidad)" data-price="4500">Pastaflora Grande · 1 unidad ($4.500)</option>
+              <option value="Masitas Caseras (1 paquete)" data-price="3000">Masitas Caseras · 1 paquete ($3.000)</option>
+              <option value="Masitas Caseras (2 paquetes)" data-price="6000">Masitas Caseras · 2 paquetes ($6.000)</option>
+              <option value="Pepas de Batata y Membrillo (6 unidades - media docena)" data-price="3000">Pepas · Media docena / 6 u. ($3.000)</option>
+              <option value="Pepas de Batata y Membrillo (12 unidades - una docena)" data-price="6000">Pepas · Una docena / 12 u. ($6.000)</option>
+              <option value="Consulta General / Pedido Personalizado" data-price="0">Consulta General / Pedido Personalizado</option>
+            </optgroup>
           </select>
         </div>
 
@@ -606,6 +923,7 @@
               <option value="Membrillo clásico">Dulce de Membrillo clásico</option>
               <option value="Batata">Dulce de Batata</option>
               <option value="Mixta (Membrillo y Batata)">Mixta (Membrillo y Batata)</option>
+              <option value="A coordinar con Valeria / Surtido">A coordinar con Valeria / Surtido</option>
             </select>
           </div>
 
