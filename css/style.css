@@ -1262,7 +1262,7 @@ strong {
   align-items: baseline;
   flex-wrap: wrap;
   gap: 6px;
-  min-height: 2.2rem;
+  min-height: 2.8rem;
 }
 
 .product-title-sub {
@@ -1276,7 +1276,7 @@ strong {
   font-size: 0.92rem;
   color: var(--color-brown-medium);
   margin-bottom: 18px;
-  min-height: 2.7em;
+  min-height: 2.8em;
   line-height: 1.45;
 }
 
@@ -1285,11 +1285,14 @@ strong {
   flex-direction: column;
   gap: 12px;
   margin-top: auto;
+  flex-grow: 1;
 }
 
 .option-row {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
   gap: 10px;
   padding: 14px 16px;
   background-color: var(--bg-main);
@@ -1310,6 +1313,7 @@ strong {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  flex-grow: 1;
 }
 
 .option-tag {
@@ -1344,6 +1348,7 @@ strong {
   width: 100%;
   padding-top: 10px;
   border-top: 1px dashed var(--color-brown-subtle);
+  margin-top: auto;
   min-width: 0;
 }
 
