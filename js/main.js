@@ -45,7 +45,7 @@ const modalTotalPrice = document.getElementById('modalTotalPrice');
 // Modal de Contacto Desarrolladora (Rosana)
 const devModal = document.getElementById('devModal');
 
-let currentUnitPrice = 3500;
+let currentUnitPrice = 2500;
 let orderModalTrigger = null;
 let devModalTrigger = null;
 
